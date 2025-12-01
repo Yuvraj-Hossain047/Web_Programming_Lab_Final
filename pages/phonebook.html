@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phonebook</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- =============Heading Intro================ -->
+    <section id="phoneBook">
+        <div class="pbNav">
+            <h1>Welcome, <span id="userName"></span></h1>
+            <button onclick="logOut()">Logout</button>
+        </div>
+        <div class="newContactInput">
+            <h2>Add New Contact</h2>
+            <div class="contactForm">
+                <form action="" onsubmit="addContact()" id="addNumberForm">
+                    <div>
+                        <label for="contactName">Name:</label>
+                        <input type="text" id="contactName" placeholder="Contact Name" required>
+                    </div>
+                    <div>
+                        <label for="contactPhone">Phone:</label>
+                        <input type="tel" id="contactPhone" placeholder="01xxxxxxxxx" pattern="01[3-9][0-9]{8}" required>
+                    </div>
+                    <button type="submit">Add Contact</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- =========CONTACT LIST=========== -->
+    <section id="contactList">
+        <h3>All Contacts</h3>
+        <div id="contacts-container"></div>
+    </section>
+    
+    <script src="../script/fetchData.js"></script>
+</body>
+</html>
